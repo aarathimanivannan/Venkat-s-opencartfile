@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="8" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="TestSuite" duration-ms="82099" started-at="2021-04-21T13:25:15Z" finished-at="2021-04-21T13:26:37Z">
+    <groups>
+    </groups>
+    <test name="ChromeTest" duration-ms="34677" started-at="2021-04-21T13:25:15Z" finished-at="2021-04-21T13:25:50Z">
+      <class name="StepDefinition.TC003_Login">
+        <test-method status="PASS" signature="InvokeBrowser(java.lang.String)[pri:0, instance:StepDefinition.TC003_Login@4667ae56]" name="InvokeBrowser" is-config="true" duration-ms="11570" started-at="2021-04-21T18:55:15Z" finished-at="2021-04-21T18:55:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvokeBrowser -->
+        <test-method status="PASS" signature="user_should_able_to_access_the_Application_Link()[pri:1, instance:StepDefinition.TC003_Login@4667ae56]" name="user_should_able_to_access_the_Application_Link" duration-ms="6188" started-at="2021-04-21T18:55:27Z" finished-at="2021-04-21T18:55:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_should_able_to_access_the_Application_Link -->
+        <test-method status="PASS" signature="user_click_My_Account_and_Login()[pri:2, instance:StepDefinition.TC003_Login@4667ae56]" name="user_click_My_Account_and_Login" duration-ms="3904" started-at="2021-04-21T18:55:33Z" finished-at="2021-04-21T18:55:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_click_My_Account_and_Login -->
+        <test-method status="PASS" signature="user_enter_EmailAddress_and_Password()[pri:3, instance:StepDefinition.TC003_Login@4667ae56]" name="user_enter_EmailAddress_and_Password" duration-ms="1776" started-at="2021-04-21T18:55:37Z" finished-at="2021-04-21T18:55:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_enter_EmailAddress_and_Password -->
+        <test-method status="PASS" signature="user_click_on_Login_Button()[pri:4, instance:StepDefinition.TC003_Login@4667ae56]" name="user_click_on_Login_Button" duration-ms="4194" started-at="2021-04-21T18:55:38Z" finished-at="2021-04-21T18:55:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_click_on_Login_Button -->
+        <test-method status="PASS" signature="user_should_able_to_Login_successfully()[pri:0, instance:StepDefinition.TC003_Login@4667ae56]" name="user_should_able_to_Login_successfully" is-config="true" duration-ms="6949" started-at="2021-04-21T18:55:43Z" finished-at="2021-04-21T18:55:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_should_able_to_Login_successfully -->
+      </class> <!-- StepDefinition.TC003_Login -->
+    </test> <!-- ChromeTest -->
+    <test name="FirefoxTest" duration-ms="82099" started-at="2021-04-21T13:25:15Z" finished-at="2021-04-21T13:26:37Z">
+      <class name="StepDefinition.TC003_Login">
+        <test-method status="PASS" signature="InvokeBrowser(java.lang.String)[pri:0, instance:StepDefinition.TC003_Login@7085bdee]" name="InvokeBrowser" is-config="true" duration-ms="56585" started-at="2021-04-21T18:55:15Z" finished-at="2021-04-21T18:56:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InvokeBrowser -->
+        <test-method status="PASS" signature="user_should_able_to_access_the_Application_Link()[pri:1, instance:StepDefinition.TC003_Login@7085bdee]" name="user_should_able_to_access_the_Application_Link" duration-ms="6409" started-at="2021-04-21T18:56:11Z" finished-at="2021-04-21T18:56:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_should_able_to_access_the_Application_Link -->
+        <test-method status="PASS" signature="user_click_My_Account_and_Login()[pri:2, instance:StepDefinition.TC003_Login@7085bdee]" name="user_click_My_Account_and_Login" duration-ms="6243" started-at="2021-04-21T18:56:18Z" finished-at="2021-04-21T18:56:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_click_My_Account_and_Login -->
+        <test-method status="PASS" signature="user_enter_EmailAddress_and_Password()[pri:3, instance:StepDefinition.TC003_Login@7085bdee]" name="user_enter_EmailAddress_and_Password" duration-ms="1635" started-at="2021-04-21T18:56:24Z" finished-at="2021-04-21T18:56:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_enter_EmailAddress_and_Password -->
+        <test-method status="PASS" signature="user_click_on_Login_Button()[pri:4, instance:StepDefinition.TC003_Login@7085bdee]" name="user_click_on_Login_Button" duration-ms="3141" started-at="2021-04-21T18:56:26Z" finished-at="2021-04-21T18:56:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_click_on_Login_Button -->
+        <test-method status="PASS" signature="user_should_able_to_Login_successfully()[pri:0, instance:StepDefinition.TC003_Login@7085bdee]" name="user_should_able_to_Login_successfully" is-config="true" duration-ms="8054" started-at="2021-04-21T18:56:29Z" finished-at="2021-04-21T18:56:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- user_should_able_to_Login_successfully -->
+      </class> <!-- StepDefinition.TC003_Login -->
+    </test> <!-- FirefoxTest -->
+  </suite> <!-- TestSuite -->
+</testng-results>

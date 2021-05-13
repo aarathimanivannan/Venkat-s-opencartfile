@@ -1,0 +1,116 @@
+package StepDefinition;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import OpenCart.FunctionalLibrary.DriverActions;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class TC006_PlaceOrderGuestCheckout {
+	
+	DriverActions action = new DriverActions();
+	Properties p1, p2, p3, p4, p5 = new Properties();
+	
+	//Invoke Constructor
+	public TC006_PlaceOrderGuestCheckout() throws IOException {
+		p1 = action.getPropertyFile("AppLink");
+		p2 = action.getPropertyFile("TC001_RegisterAccount");
+		p3 = action.getPropertyFile("TC003_Login");
+		p4 = action.getPropertyFile("LoginCredientials");
+		p5 = action.getPropertyFile("TC005_SelectDesktop");
+	}
+	
+	
+	@Given("^User should able to Login with User Credentials$")
+	public void user_should_able_to_Login_with_User_Credentials() throws Throwable {
+	    
+
+	}
+
+	@When("^User click Laptops and Notebooks$")
+	public void user_click_Laptops_and_Notebooks() throws Throwable {
+	    
+
+	}
+
+	@When("^User click on Show all Laptops and Notebooks$")
+	public void user_click_on_Show_all_Laptops_and_Notebooks() throws Throwable {
+	    
+
+	}
+
+	@When("^User select \"([^\"]*)\"$")
+	public void user_select(String arg1) throws Throwable {
+	    
+
+	}
+
+	@When("^User change \"([^\"]*)\" to future$")
+	public void user_change_to_future(String arg1) throws Throwable {
+	    
+
+	}
+
+	@When("^User click on Add to Cart Button$")
+	public void user_click_on_Add_to_Cart_Button() throws Throwable {
+	    
+
+	}
+
+	@When("^User click on Items Basket$")
+	public void user_click_on_Items_Basket() throws Throwable {
+	    
+
+	}
+
+	@When("^User click on Check Out Button$")
+	public void user_click_on_Check_Out_Button() throws Throwable {
+	    
+
+	}
+
+	@When("^User click on Guest Checkout Button$")
+	public void user_click_on_Guest_Checkout_Button() throws Throwable {
+	    
+
+	}
+
+	@When("^User enter the Mandatory Fields \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void user_enter_the_Mandatory_Fields_and_and_and_and_and_and_and_and_and_and(String arg1, String arg2, String arg3, String arg4, String arg5, String arg6, String arg7, String arg8, String arg9, String arg10, String arg11) throws Throwable {
+	    
+
+	}
+
+	@When("^User click Continue$")
+	public void user_click_Continue() throws Throwable {
+	    
+
+	}
+
+	@When("^User Add comments under Delivery Method and click Continue$")
+	public void user_Add_comments_under_Delivery_Method_and_click_Continue() throws Throwable {
+	    
+
+	}
+
+	@When("^User check in Terms and Conditions and click Continue$")
+	public void user_check_in_Terms_and_Conditions_and_click_Continue() throws Throwable {
+	    
+
+	}
+
+	@When("^User click on Confirm Order$")
+	public void user_click_on_Confirm_Order() throws Throwable {
+	    
+
+	}
+
+	@Then("^Order should Placed Successfully$")
+	public void order_should_Placed_Successfully() throws Throwable {
+	    
+
+	}
+
+}

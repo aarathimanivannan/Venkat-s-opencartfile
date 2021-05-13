@@ -1,0 +1,68 @@
+package StepDefinition;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import OpenCart.FunctionalLibrary.DriverActions;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class TC007_PlaceOrderRegisterAccountCheckout {
+	
+	DriverActions action = new DriverActions();
+	Properties p1, p2, p3, p4, p5 = new Properties();
+	
+	//Invoke Constructor
+	public TC007_PlaceOrderRegisterAccountCheckout() throws IOException {
+		p1 = action.getPropertyFile("AppLink");
+		p2 = action.getPropertyFile("TC006_PlaceOrderGuestCheckout");
+		p3 = action.getPropertyFile("TC007_PlaceOrderRegisterAccountCheckout");
+	}
+	
+	
+	@Given("^User should able to Login with User Credentials$")
+	public void user_should_able_to_Login_with_User_Credentials() throws Throwable {
+		action.getBrowser("Chrome");
+		action.getWebLink(p1.getProperty("getAppLink"));
+	}
+
+	@When("^User click Laptops and Notebooks$")
+	public void user_click_Laptops_and_Notebooks() throws Throwable {
+		action.clickWebElement("xpath", p2.getProperty("clickLaptopsandNotebooks"));
+	}
+
+	@When("^User click on Show all Laptops and Notebooks$")
+	public void user_click_on_Show_all_Laptops_and_Notebooks() throws Throwable {
+		action.clickWebElement("xpath", p2.getProperty("clickShowAll"));
+	}
+
+	@When("^User select Laptop Type$")
+	public void user_select_Laptop_Type() throws Throwable {
+		action.clickWebElement("xpath", p2.getProperty("selectLaptop"));
+	}
+
+	@When("^User change \"([^\"]*)\" to future$")
+	public void user_change_to_future(String DeliveryDate) throws Throwable {
+		action.clearTextArea("xpath", p2.getProperty("inputDeliveryDate"));
+		action.inputValues("xpath", p2.getProperty("inputDeliveryDate"), DeliveryDate);
+	}
+
+	@When("^User click on Add to Cart Button$")
+	public void user_click_on_Add_to_Cart_Button() throws Throwable {
+		action.clickWebElement("xpath", p2.getProperty("clickAddtoCart"));
+	}
+
+	@When("^User click on Items Basket$")
+	public void user_click_on_Items_Basket() throws Throwable {
+		action.clickWebElement("xpath", p2.getProperty("clickShoppingCart"));
+	}
+
+	@When("^User click on Check Out Button$")
+	public void user_click_on_Check_Out_Button() throws Throwable {
+		action.ExplicitWait(p2.getProperty("clickCheckout"));
+		action.clickWebElement("xpath", p2.getProperty("clickCheckout"));
+	}
+
+	
+}

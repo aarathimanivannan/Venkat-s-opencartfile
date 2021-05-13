@@ -1,0 +1,2 @@
+inputEmailAddress = //input[@id="input-email"]
+inputPassword = //input[@id="input-password"]

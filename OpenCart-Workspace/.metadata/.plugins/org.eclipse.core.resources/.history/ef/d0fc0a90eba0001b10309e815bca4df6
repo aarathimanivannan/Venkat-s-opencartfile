@@ -1,0 +1,40 @@
+package StepDefinition;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class TC003_Login {
+	
+	
+	@Given("^User should able to access the Application Link$")
+	public void user_should_able_to_access_the_Application_Link() throws Throwable {
+	    
+	    
+	}
+
+	@When("^User click My Account and Login$")
+	public void user_click_My_Account_and_Login() throws Throwable {
+	    
+	    
+	}
+
+	@When("^User enter EmailAddress and Password$")
+	public void user_enter_EmailAddress_and_Password() throws Throwable {
+	    
+	    
+	}
+
+	@When("^User click on Login Button$")
+	public void user_click_on_Login_Button() throws Throwable {
+	    
+	    
+	}
+
+	@Then("^User should able to Login successfully$")
+	public void user_should_able_to_Login_successfully() throws Throwable {
+	    
+	    
+	}
+
+}

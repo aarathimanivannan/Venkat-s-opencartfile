@@ -1,0 +1,127 @@
+package StepDefinition;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import OpenCart.FunctionalLibrary.DriverActions;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class TC006_PlaceOrderGuestCheckout {
+	
+	DriverActions action = new DriverActions();
+	Properties p1, p2, p3, p4, p5 = new Properties();
+	
+	//Invoke Constructor
+	public TC006_PlaceOrderGuestCheckout() throws IOException {
+		p1 = action.getPropertyFile("AppLink");
+		p2 = action.getPropertyFile("TC001_RegisterAccount");
+		p3 = action.getPropertyFile("TC003_Login");
+		p4 = action.getPropertyFile("LoginCredientials");
+		p5 = action.getPropertyFile("TC006_PlaceOrderGuestCheckout");
+	}
+	
+	
+	@Given("^User should able to Login with User Credentials$")
+	public void user_should_able_to_Login_with_User_Credentials() throws Throwable {
+		action.getBrowser("Chrome");
+		action.getWebLink(p1.getProperty("getAppLink"));
+		action.clickWebElement("xpath", p2.getProperty("clickMyAccount"));
+		action.clickWebElement("xpath", p3.getProperty("clickLogin"));
+		action.inputValues("xpath", p3.getProperty("inputEmailAddress"), p4.getProperty("EmailAddress"));
+		action.inputValues("xpath", p3.getProperty("inputPassword"), p4.getProperty("Password"));
+		action.clickWebElement("xpath", p3.getProperty("clickLoginButton"));
+	}
+
+	@When("^User click Laptops and Notebooks$")
+	public void user_click_Laptops_and_Notebooks() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("clickLaptopsandNotebooks"));
+	}
+
+	@When("^User click on Show all Laptops and Notebooks$")
+	public void user_click_on_Show_all_Laptops_and_Notebooks() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("clickShowAll"));
+	}
+
+	@When("^User select Laptop Type$")
+	public void user_select_Laptop_Type() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("selectLaptop"));
+	}
+
+	@When("^User change \"([^\"]*)\" to future$")
+	public void user_change_to_future(String DeliveryDate) throws Throwable {
+		action.clearTextArea("xpath", p5.getProperty("inputDeliveryDate"));
+		action.inputValues("xpath", p5.getProperty("inputDeliveryDate"), DeliveryDate);
+	}
+
+	@When("^User click on Add to Cart Button$")
+	public void user_click_on_Add_to_Cart_Button() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("clickAddtoCart"));
+	}
+
+	@When("^User click on Items Basket$")
+	public void user_click_on_Items_Basket() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("clickShoppingCart"));
+	}
+
+	@When("^User click on Check Out Button$")
+	public void user_click_on_Check_Out_Button() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("clickCheckout"));
+	}
+
+	@When("^User click on Guest Checkout Button$")
+	public void user_click_on_Guest_Checkout_Button() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("clickGuestCheckout"));
+		action.clickWebElement("xpath", p5.getProperty("clickContinue"));
+	}
+
+	@When("^User enter the Mandatory Fields \"([^\"]*)\" and \"([^\"]*)\" "
+			+ "and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" and \"([^\"]*)\" "
+			+ "and \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void user_enter_the_Mandatory_Fields_and_and_and_and_and_and_and_and_and_and(String FirstName, 
+			String LastName, String Email, String Telephone, String Address, String City, String PostalCode, 
+			String Country, String RegionState) throws Throwable {
+		action.ExplicitWait(p5.getProperty("inputFirstName"));
+		action.inputValues("xpath", p5.getProperty("inputFirstName"), FirstName);
+		action.inputValues("xpath", p5.getProperty("inputLastName"), LastName);
+		action.inputValues("xpath", p5.getProperty("inputEmail"), Email);
+		action.inputValues("xpath", p5.getProperty("inputTelephone"), Telephone);
+		action.inputValues("xpath", p5.getProperty("inputAddress"), Address);
+		action.inputValues("xpath", p5.getProperty("inputCity"), City);
+		action.inputValues("xpath", p5.getProperty("inputPostalCode"), PostalCode);
+		action.SelList("xpath", p5.getProperty("selectCountry"), Country);
+		action.SelList("xpath", p5.getProperty("selectRegion/State"), RegionState);
+	}
+
+	@When("^User click Continue$")
+	public void user_click_Continue() throws Throwable {
+		action.clickWebElement("xpath", p5.getProperty("clickContinue1"));
+	}
+
+	@When("^User Add comments under Delivery Method and click Continue$")
+	public void user_Add_comments_under_Delivery_Method_and_click_Continue() throws Throwable {
+		action.inputValues("xpath", p5.getProperty("inputComment"), ");
+	    
+
+	}
+
+	@When("^User check in Terms and Conditions and click Continue$")
+	public void user_check_in_Terms_and_Conditions_and_click_Continue() throws Throwable {
+	    
+
+	}
+
+	@When("^User click on Confirm Order$")
+	public void user_click_on_Confirm_Order() throws Throwable {
+	    
+
+	}
+
+	@Then("^Order should Placed Successfully$")
+	public void order_should_Placed_Successfully() throws Throwable {
+	    
+
+	}
+
+}

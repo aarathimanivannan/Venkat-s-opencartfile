@@ -1,0 +1,10 @@
+package DataProvider;
+
+public class DriverPathProvider {
+	
+	public String IEDriverPath = "H:\\data\\Venkat\\Selenium\\IEDriverServer_x64_3.141.5\\"
+											+ "IEDriverServer.exe";
+	public String ChromeDriverPath = "C:\\Users\\admin\\git_auto\\Lumens-Workspace\\LumensPortal"
+											+ "\\Drivers\\Chrome\\chromedriver.exe";
+
+}

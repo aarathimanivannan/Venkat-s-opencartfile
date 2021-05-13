@@ -1,0 +1,5 @@
+clickGuestCheckout = //*[@id="collapse-checkout-option"]/div/div/div[1]/div[2]/label
+clickGuestContinue = //input[@id='button-account']
+clickGuestContinue1 = //input[@id='button-guest']
+inputEmail = //input[@id='input-payment-email']
+inputTelephone = //input[@id='input-payment-telephone']

@@ -1,0 +1,3 @@
+inputEmailAddress = //input[@id="input-email"]
+inputPassword = //input[@id="input-password"]
+clickLogin = //input[@class="btn btn-primary"]

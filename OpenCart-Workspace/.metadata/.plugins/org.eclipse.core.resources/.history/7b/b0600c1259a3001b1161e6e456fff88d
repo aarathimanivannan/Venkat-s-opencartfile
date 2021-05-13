@@ -1,0 +1,5 @@
+inputSearch = //input[@class='form-control input-lg']
+clickSearchButton = //button[@class='btn btn-default btn-lg']
+clickAddtoCart = /html/body/div[2]/div/div/div[3]/div/div/div[2]/div[2]/button[1]
+clickItemCart = //button[@class='btn btn-inverse btn-block btn-lg dropdown-toggle']
+clickCheckout = /html/body/header/div/div/div[3]/div/ul/li[2]/div/p/a[2]

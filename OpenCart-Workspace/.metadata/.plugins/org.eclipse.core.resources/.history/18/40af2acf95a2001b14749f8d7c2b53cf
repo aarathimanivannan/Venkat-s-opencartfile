@@ -1,0 +1,25 @@
+package OpenCart.Logs;
+
+import org.apache.log4j.Logger;
+
+public class Log {
+	
+	private static Logger Log = Logger.getLogger(Log.class.getName());
+	
+	//Creating Logger Methods
+	public static void info(String Message) {
+		Log.info(Message);
+	}
+	
+	public static void error(String Message) {
+		Log.error(Message);
+	}
+
+	public static void warn(String Message) {
+		Log.warn(Message);
+	}
+	
+	public static void debug(String Message) {
+		Log.debug(Message);
+	}
+}

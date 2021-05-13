@@ -1,0 +1,23 @@
+Feature: Place Order Guest Checkout
+
+	@RegisterAccountCheckout
+  Scenario Outline: Order Placement with Guest Checkout
+    Given User should able to access OpenCart Application
+    When User click Laptops and Notebooks tab
+    And User click on Show all Laptops and Notebooks option
+    And User select Laptop Type from List
+    And User change <DeliveryDate> to future date
+    And User click on Add to Cart
+    And User click on Items Basket
+    And User click on Check Out 
+    And User click on Guest Checkout Button and click Continue
+    And User enter the Mandatory Fields <EmailAddress> and <Password> and <ConfirmPassword> and <FirstName> and <LastName> and <Address> and <Telephone> and <City> and <PostalCode> and <Country> and <Region/State>
+    And User click Continue
+    And User <AddComments> under Delivery Method and click Continue
+    And User check in Terms and Conditions and click Continue
+    And User click on Confirm Order 
+    Then Order should Placed Successfully
+
+    Examples: 
+      | EmailAddress   | FirstName | LastName | Address      | Telephone | City      | PostalCode | Country | Region/State | DeliveryDate | AddComments     |
+      | "gvr@test.com" | "gan"     | "ven"    | "LIG Colony" | "234434"  | "Madurai" | "625020"   | "India" | "Tamil Nadu" | "2021-04-22" | "Fast Shipping" |

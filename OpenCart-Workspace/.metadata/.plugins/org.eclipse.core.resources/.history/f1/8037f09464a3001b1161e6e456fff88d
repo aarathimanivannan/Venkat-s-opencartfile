@@ -1,0 +1,4 @@
+clickProduct = /html/body/div/div/div/div[4]/div[5]/div/div[2]/div/h4/a
+clickAddtoCart = //button[@id='button-cart']
+clickRemove = /html/body/div/div/div/form/div/table/tbody/tr[1]/td[4]/div/span/button[2]
+clickContinue = //a[@class='btn btn-primary']

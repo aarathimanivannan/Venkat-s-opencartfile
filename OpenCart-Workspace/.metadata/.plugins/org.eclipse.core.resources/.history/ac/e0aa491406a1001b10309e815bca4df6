@@ -1,0 +1,23 @@
+Feature: Place Order with Guest Checkout
+
+  @GuestCheckout
+  Scenario Outline: Order Placement with Guest Checkout
+    Given User should able to Login with User Credentials
+    When User click Laptops and Notebooks
+    And User click on Show all Laptops and Notebooks
+    And User select Laptop Type
+    And User change <DeliveryDate> to future
+    And User click on Add to Cart Button
+    And User click on Items Basket
+    And User click on Check Out Button
+    And User click on Guest Checkout Button
+    And User enter the Mandatory Fields <EmailAddress> and <Password> and <ConfirmPassword> and <FirstName> and <LastName> and <Address> and <Telephone> and <City> and <PostalCode> and <Country> and <Region/State>
+    And User click Continue
+    And User Add comments under Delivery Method and click Continue
+    And User check in Terms and Conditions and click Continue
+    And User click on Confirm Order 
+    Then Order should Placed Successfully
+
+    Examples: 
+      | EmailAddress   | Password   | ConfirmPassword | FirstName | LastName | Address      | Telephone | City      | PostalCode | Country | Region/State | DeliveryDate |
+      | "gvr@test.com" | "Test@123" | "Test@123"      | "gan"     | "ven"    | "LIG Colony" | "234434"  | "Madurai" | "625020"   | "India" | "Tamil Nadu" | "2021-04-22" |

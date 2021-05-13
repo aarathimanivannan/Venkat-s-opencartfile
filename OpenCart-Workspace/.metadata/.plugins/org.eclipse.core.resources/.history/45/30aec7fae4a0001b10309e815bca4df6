@@ -1,0 +1,12 @@
+Feature: Register Account Failure
+
+  @RegisterAccountFailure
+  Scenario Outline: To Check User not able to Create Account when any required fields is Missing
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |
